@@ -9,6 +9,7 @@ pipeline{
         stage("dry-test"){
             steps{
                 echo "========executing dry-test stage========"
+                echo "========testing token to trigger jenkins pipeline========"
             }
         }
         stage("dry-deploy"){
