@@ -18,17 +18,17 @@ pipeline{
                 echo "========executing dry-deploy stage========"
             }
         }
-            post{
-                always{
-                    echo "========The pipeline was executedtil the end========"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
+        post{
+            always{
+                echo "========The pipeline was executedtil the end========"
             }
+            success{
+                echo "========A executed successfully========"
+            }
+            failure{
+                echo "========A execution failed========"
+            }
+        }
         }
     }
     post{
