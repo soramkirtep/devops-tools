@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-devops-tools
+  namespace: devops-tools
+  labels:
+    name: ingress-devops-tools
+spec:
+  tls:
+  - hosts:
+    - jenkins.devops-tools.com
+    secretName: ingress-tls
+  rules:
+  - host: jenkins.devops-tools.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: jenkins-service
+            port: 
+              number: 8080
