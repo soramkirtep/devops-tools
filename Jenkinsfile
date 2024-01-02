@@ -29,7 +29,6 @@ pipeline{
                 echo "========A execution failed========"
             }
         }
-        }
     }
     post{
         always{
@@ -42,3 +41,5 @@ pipeline{
             echo "========pipeline execution failed========"
         }
     }
+}
+    
