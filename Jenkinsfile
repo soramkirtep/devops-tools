@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "testing jenkins agent"
+        label "any"
     }
     stages{
         stage("dry-build"){
